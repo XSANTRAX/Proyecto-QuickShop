@@ -44,9 +44,29 @@ function renderCarrito() {
     contenedor.appendChild(card);
   });
 
-  const totalElemento = document.createElement("p");
-  totalElemento.textContent = "Total: $" + total;
-  contenedor.appendChild(totalElemento);
+    const mainElement = document.querySelector("main");
+    
+    // Remove existing total price and buy button if they exist
+    const existingTotalPrice = mainElement.querySelector(".total-price");
+    if (existingTotalPrice) {
+        existingTotalPrice.remove();
+    }
+
+    const existingBuyButtonContainer = mainElement.querySelector(".buy-button-container");
+    if (existingBuyButtonContainer) {
+        existingBuyButtonContainer.remove();
+    }
+
+
+    const totalElemento = document.createElement("p");
+    totalElemento.classList.add("total-price");
+    totalElemento.textContent = "Total: $" + total;
+    mainElement.appendChild(totalElemento);
+
+    const buyButtonContainer = document.createElement("div");
+    buyButtonContainer.classList.add("buy-button-container");
+    buyButtonContainer.innerHTML = `<button class="buy">Finalizar Compra</button>`;
+    mainElement.appendChild(buyButtonContainer);
 }
 
 renderCarrito();
