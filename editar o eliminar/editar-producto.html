@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar producto</title>
+    <link rel = "stylesheet" href="../style.css">
+    <script src="../shared/navbar.js" defer></script>
+</head>
+
+<body>
+    <header>
+    </header>
+    <main>
+        <section>
+            <h1>Editar producto</h1>
+            <p>A continuación podrás editar el producto que elijas a traves de su ID</p>
+        </section>
+        <section>
+            <form id="form-configuracion">
+                <label for="ID">ID del producto</label>
+                <input type="text" id="ID" name="ID" placeholder="ID del producto" required>
+                <label for="nombre">Nombre del producto</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre del producto">
+                <label for="descripcion">Descripción del producto</label>
+                <input type="text" id="descripcion" name="descripcion" placeholder="Descripción del producto">
+                <label for="categoria">Categoria del producto</label>
+                <select id="categoria" name="categoria" >
+                    <option value="" disabled selected>Selecciona una categoría</option>
+                    <option value="1">Muebles</option>
+                    <option value="2">Vestidos</option>
+                    <option value="3">Accesorios</option>
+                    <option value="4">Electrónicos</option>
+                    <option value="5">Juguetes</option>
+                    <option value="6">Otros</option>
+                </select>
+                <label for="precio">Precio del producto</label>
+                <input type="text" step="any" id="precio" name="precio" placeholder="Precio del producto">
+                <label for="imagen">Imagen del producto</label>
+                <input type="number" id="imagen" name="imagen" placeholder="URL de la imagen del producto">
+                <div>
+                <button type="submit" id="editar">Guardar</button>
+                </div>
+                <div>
+                    <button type="submit" id="eliminar">Eliminar</button>
+                </div>
+            </form>
+        </section>
+        <section>
+            <div><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18" />
+                </svg>
+                <a href="./../configuración/configuracion.html">Atras</a>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+    <script src="editar.js"></script>
+</body>
+
+</html>
